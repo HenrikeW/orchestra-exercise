@@ -1,0 +1,62 @@
+<!-- First step: Use the boilerplate of HTML 5 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Overwhelming Online Orchestra</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- The idea is to build nine buttons with different instruments on them. If you click on one button, the instrument's sound starts and the button will change color (to mark that it's clicked).
+    If you click again, the sound stops and the color changes back to original.
+    As images for the instruments, emojis can be used. 
+    Sound files will be provided in a "Sounds" folder. -->
+
+    <!-- Creating a header for the headline and description. -->
+    <header>
+        <h1>The Overwhelming Online Orchestra</h1>
+        <p>Click on a button to play an instrument. To turn it off, click again</p>
+    </header>
+
+    <!-- Creating a section for the actual orchestra -->
+    <section class="orchestra">
+        <!-- Creating a div as a container for all the buttons -->
+        <div class="button-container">
+            <!-- Creating nine buttons. The emojis are inserted with simple copy/paste from a page like this http://unicode.org/emoji/charts/full-emoji-list.html -->
+            <!-- The argument of the playAudio-function needs to be the id of the corresponding audio-tag. (I found this out but can't actually explain why this is the case, haha.)  -->
+            <!-- I add loop to each audio file so that it will play endlessley until it's turned off again by clicking  -->
+
+            <button onclick="playAudio(saxophone)">🎷</button>
+            <audio id="saxophone" src="./sounds/saxophone.wav" type="wav" loop></audio>
+
+            <button onclick="playAudio(guitar)">🎸</button>
+            <audio id="guitar" src="./Sounds/guitar.wav" type="wav" loop></audio>
+
+            <button onclick="playAudio(piano)">🎹</button>
+            <audio id="piano" src="./Sounds/piano.wav" type="wav" loop></audio>
+
+            <button onclick="playAudio(trumpet)">🎺</button>
+            <audio id="trumpet" src="./Sounds/trumpet.wav" type="wav" loop></audio>
+
+            <button onclick="playAudio(violin)">🎻</button>
+            <audio id="violin" src="./Sounds/violin.wav" type="wav" loop></audio>
+
+            <button onclick="playAudio(banjo)">🪕</button>
+            <audio id="banjo" src="./Sounds/banjo.mp3" type="mp3" loop></audio>
+
+            <button onclick="playAudio(drums)">🥁</button>
+            <audio id="drums" src="./Sounds/drums.wav" type="wav" loop></audio>
+
+            <button onclick="playAudio(voices)">🎤</button>
+            <audio id="voices" src="./Sounds/voices.mp3" type="mp3" loop></audio>
+
+            <button onclick="playAudio(bell)">🔔</button>
+            <audio id="bell" src="./Sounds/bell.wav" type="wav" loop></audio>
+        </div>
+    </section>
+    
+    <!-- Create connection with the Javascript file  -->
+    <script src="./script.js"></script> 
+</body>
+</html>

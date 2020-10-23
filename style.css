@@ -1,0 +1,50 @@
+/*The page is styled for desktop and is not responsive.*/
+
+/*Styling the whole page*/
+
+body {
+    margin: 0; /*takes away the white space around the page*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Styling the header  */
+
+header {
+    background-color: darkblue;
+    height: 150px;
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+
+/*Styling the orchestra section*/
+
+.orchestra {
+    width: 100%;
+    background-color: lightblue;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center; /*to put the buttons in the middle of the page*/
+}
+
+/*Styling the container for the buttons*/
+
+.button-container {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /*to put the buttons in the middle of the page*/
+}
+
+/*Styling the buttons*/
+
+button {
+    background-color: orange;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 5%;
+    border: 3px solid black;
+    font-size: 40px;
+}
