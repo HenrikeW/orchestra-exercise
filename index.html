@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Overwhelming Online Orchestra</title>
+    <title>The Overwhelming Orchestra</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 
     <!-- Creating a header for the headline and description. -->
     <header>
-        <h1>The Overwhelming Online Orchestra</h1>
+        <h1>The Overwhelming Orchestra</h1>
         <p>Click on a button to play an instrument. To turn it off, click again</p>
     </header>
 
@@ -25,33 +25,34 @@
         <div class="button-container">
             <!-- Creating nine buttons. The emojis are inserted with simple copy/paste from a page like this http://unicode.org/emoji/charts/full-emoji-list.html -->
             <!-- The argument of the playAudio-function needs to be the id of the corresponding audio-tag. (I found this out but can't actually explain why this is the case, haha.)  -->
+            <!-- The argument of the toggleButton-function is the id of the corresponding button. -->
             <!-- I add loop to each audio file so that it will play endlessley until it's turned off again by clicking  -->
 
-            <button onclick="playAudio(saxophone)">🎷</button>
+            <button id="saxBtn" onclick="playAudio(saxophone), toggleButton(saxBtn)">🎷</button>
             <audio id="saxophone" src="./sounds/saxophone.wav" type="wav" loop></audio>
 
-            <button onclick="playAudio(guitar)">🎸</button>
+            <button id="guitarBtn" onclick="playAudio(guitar), toggleButton(guitarBtn)">🎸</button>
             <audio id="guitar" src="./Sounds/guitar.wav" type="wav" loop></audio>
 
-            <button onclick="playAudio(piano)">🎹</button>
+            <button id="pianoBtn" onclick="playAudio(piano), toggleButton(pianoBtn)">🎹</button>
             <audio id="piano" src="./Sounds/piano.wav" type="wav" loop></audio>
 
-            <button onclick="playAudio(trumpet)">🎺</button>
+            <button id="trumpetBtn" onclick="playAudio(trumpet), toggleButton(trumpetBtn)">🎺</button>
             <audio id="trumpet" src="./Sounds/trumpet.wav" type="wav" loop></audio>
 
-            <button onclick="playAudio(violin)">🎻</button>
+            <button id="violinBtn" onclick="playAudio(violin), toggleButton(violinBtn)">🎻</button>
             <audio id="violin" src="./Sounds/violin.wav" type="wav" loop></audio>
 
-            <button onclick="playAudio(banjo)">🪕</button>
+            <button id="banjoBtn" onclick="playAudio(banjo), toggleButton(banjoBtn)">🪕</button>
             <audio id="banjo" src="./Sounds/banjo.mp3" type="mp3" loop></audio>
 
-            <button onclick="playAudio(drums)">🥁</button>
+            <button id="drumsBtn" onclick="playAudio(drums), toggleButton(drumsBtn)">🥁</button>
             <audio id="drums" src="./Sounds/drums.wav" type="wav" loop></audio>
 
-            <button onclick="playAudio(voices)">🎤</button>
+            <button id="voicesBtn" onclick="playAudio(voices), toggleButton(voicesBtn)">🎤</button>
             <audio id="voices" src="./Sounds/voices.mp3" type="mp3" loop></audio>
 
-            <button onclick="playAudio(bell)">🔔</button>
+            <button id="bellBtn" onclick="playAudio(bell), toggleButton(bellBtn)">🔔</button>
             <audio id="bell" src="./Sounds/bell.wav" type="wav" loop></audio>
         </div>
     </section>

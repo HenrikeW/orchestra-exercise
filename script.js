@@ -6,3 +6,17 @@
 const playAudio = (sound) => {
     return sound.paused ? sound.play() : sound.pause();
 }
+
+//Create a function to turn the color green and back again when a button is clicked.
+
+let color = ""
+const toggleButton = (button) => {
+    if (color !== "green") {
+        color = "green";
+        button.style.backgroundColor = color
+    }
+    else if (color == "green") {
+        color = "orange"
+        button.style.backgroundColor = color
+    }
+}
