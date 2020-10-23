@@ -11,11 +11,11 @@ const playAudio = (sound) => {
 
 let color = ""
 const toggleButton = (button) => {
-    if (color !== "green") {
+    if (button.style.backgroundColor !== "green") {
         color = "green";
         button.style.backgroundColor = color
     }
-    else if (color == "green") {
+    else if (button.style.backgroundColor == "green") {
         color = "orange"
         button.style.backgroundColor = color
     }
